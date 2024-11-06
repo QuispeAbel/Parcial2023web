@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    padding-top: 70px; /* Ajusta este valor según la altura de tu encabezado */
+    
+}
+
+#map { height: 400px; /* Puedes ajustar la altura como prefieras */ 
+        width: 100%; /* El mapa ocupará todo el ancho disponible */ }
+

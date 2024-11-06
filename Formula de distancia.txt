@@ -1,0 +1,10 @@
+
+//formula de distancia en javascript
+PI = 3.14159265358979323846;
+Lat1 = Lat1 * PI / 180;
+Lon1 = Lon1 * PI / 180;
+Lat2 = Lat2 * PI / 180;
+Lon2 = Lon2 * PI / 180;
+D = 6378.137 * Math.acos( Math.cos( Lat1 ) * Math.cos( Lat2 ) * Math.cos( Lon2 - Lon1 ) + Math.sin( Lat1 ) * Math.sin( Lat2 ) ) 
+
+

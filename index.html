@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encabezado Fijo con Bootstrap</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="images/ubicacion.png" alt="Logo" class="d-inline-block align-top"
+                    style="width: 30px; height: 30px;">
+            </a>
+            <a class="navbar-brand" href="#">Ubicate</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse order-1 order-lg-0" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="content container d-flex flex-column justify-content-center align-items-center">
+        <h1>Bienvenido!</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>País</th>
+                    <th>Ubicacion</th>
+                    <th>Región</th>
+                </tr>
+            </thead>
+            <tbody id="paises">
+                <!-- Aquí datos de api-->
+            </tbody>
+        </table>
+        <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-secondary mb-3" type="button" id="ampliar">Ampliar</button>
+        </div>
+        <!-- ventana modal Provincias/Localidades-->
+        <div class="modal fade" id="modalProvincias" tabindex="-1" role="dialog" aria-labelledby="modalProvinciasLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalProvinciasLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="provinciasContent">
+                        <!-- Aquí se cargarán las provincias -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ventana modal para el mapa -->
+        <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="mapModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mapModalLabel">Mapa</h5> <button type="button" class="close"
+                            data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="map"></div>
+                    </div>
+                    <div class="modal-footer"> <button type="button" class="btn btn-secondary"
+                            data-dismiss="modal">Cerrar</button> </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer class=" bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Mi Sitio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script/eldeVerda.js"></script>
+</body>
+
+</html>
